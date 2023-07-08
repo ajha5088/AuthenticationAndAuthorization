@@ -53,7 +53,6 @@ class AuthService {
             const sessionsCollection = db.collection('sessions');
 
             const filter = { "session.user":`${user}`};
-            // const filter2 = { "session.csrfSecret": csrfSecret };
             const deleteSession = await sessionsCollection.deleteOne(filter);
             client.close();
 
